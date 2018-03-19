@@ -8,7 +8,7 @@ public class Main {
         while (sc.hasNextLine()) {
             String s1 = sc.nextLine();
             String s2 = sc.nextLine();
-            System.out.println(getRe(s1,s2));
+            System.out.println(getRe(s1, s2));
         }
     }
 
@@ -24,22 +24,22 @@ public class Main {
         for (int i = 0; i < chars2.length; i++) {
             int start = i;
             for (int j = 0; j < chars1.length; j++) {
-                int length=0;
-                for (int k = j; k <chars1.length ; k++) {
-                    if(start>=chars2.length){
+                int length = 0;
+                for (int k = j; k < chars1.length; k++) {
+                    if (start >= chars2.length) {
                         break;
                     }
-                    if(chars1[k]==chars2[start]){
+                    if (chars1[k] == chars2[start]) {
                         length++;
-                    }else{
-                        max = Math.max(length,max);
+                    } else {
+                        max = Math.max(length, max);
                         length = 0;
-                        k=j-1;
+                        k = j - 1;
                     }
                     start++;
                 }
-                max = Math.max(length,max);
-                start=i;
+                max = Math.max(length, max);
+                start = i;
             }
         }
         return max;
