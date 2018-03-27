@@ -1,4 +1,4 @@
-package test40;
+package test42_wangyi;
 
 import java.util.Scanner;
 
